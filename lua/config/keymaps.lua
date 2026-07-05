@@ -14,3 +14,19 @@ vim.keymap.set("n", "<leader>pr", function()
   vim.fn.system({ "p4", "revert", vim.fn.expand("%:p") })
   vim.cmd("edit!")
 end, { desc = "P4 revert file" })
+
+vim.keymap.set("i", "jk", "<Esc>", { noremap = true })
+
+--- Custom tab remapping - switch shift to ctrl
+vim.keymap.set("n", "H", "<C-w>h")
+vim.keymap.set("n", "L", "<C-w>l")
+
+vim.keymap.set("n", "<C-h>", "[b")
+vim.keymap.set("n", "<C-l>", "]b")
+
+--- Custom delete remapping - don't store into register
+vim.keymap.set({ "n", "v" }, "dd", '"_dd')
+vim.keymap.set({ "n", "v" }, "D", '"_D')
+vim.keymap.set({ "n", "v" }, "x", '"_x')
+
+vim.keymap.set({ "n", "v" }, "<leader>d", "d")
