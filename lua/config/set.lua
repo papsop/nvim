@@ -17,4 +17,7 @@ vim.opt.updatetime = 50
 
 vim.opt.timeoutlen = 300
 
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+
 vim.g.mapleader = " "
